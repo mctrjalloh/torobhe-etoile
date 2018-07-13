@@ -1,0 +1,46 @@
+#: import BoxLayout kivy.uix.boxlayout.BoxLayout
+
+<Article@BoxLayout>:
+    orientation: 'vertical'
+    size_hint: .8, .8
+    # canvas:
+    #     Color:
+    #         rgba: 0, 0, 1, 1
+    #     Rectangle:
+    #         pos: self.pos
+    #         size: self.size
+    Label:
+        text: "Entrer les informations sur l'article"
+        font_size: 25
+        size_hint: None, None
+        size: 500, 60
+        # canvas:
+        #     Color:
+        #         rgba: 1, 0, 0, 1
+        #     Rectangle:
+        #         pos: self.pos
+        #         size: self.size
+    Field:
+        label: "Nom: "
+    Field:
+        label: "Description: "
+    Field:
+        label: "Prix: "
+    Field:
+        label: "Date: "
+    Label:
+        size_hint: None, None
+        size: 0, 200
+
+
+<Field@BoxLayout>:
+    orientation: 'horizontal'
+    label: ''
+    padding: [0, 10, 0, 10]
+    size_hint: None, None
+    size: 500, 60
+    Label:
+        text: root.label
+        size_hint_x: .3
+    TextInput:
+        multiline: False
