@@ -1,0 +1,15 @@
+#: import BoxLayout kivy.uix.boxlayout.BoxLayout
+
+<Field@BoxLayout>:
+    orientation: 'horizontal'
+    label: ''
+    padding: [0, 10, 50, 10]
+    size_hint: None, None
+    size_hint_y: None
+    height: 60
+    size_hint_x: 1
+    Label:
+        text: root.label
+        size_hint_x: .3
+    TextInput:
+        multiline: False

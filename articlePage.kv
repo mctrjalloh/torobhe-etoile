@@ -1,0 +1,69 @@
+#: import BoxLayout kivy.uix.boxlayout.BoxLayout
+#: import FloatLayout kivy.uix.floatlayout.FloatLayout
+
+#: include field.kv
+
+<ArticlePage@BoxLayout>:
+    Article:
+        padding: 30
+
+<Article@BoxLayout>:
+    orientation: 'vertical'
+    Title:
+        size_hint: 1, .2
+        title: "Entrer les informations sur l'article: "
+        # canvas:
+        #     Color:
+        #         rgba: 0, 1, 0, 1
+        #     Rectangle:
+        #         pos: self.pos
+        #         size: self.size
+    Body:
+        padding: [30, 10, 30, 10]
+
+
+<Title@Label>:
+    title: ''
+    font_size: 15
+    text: self.title
+    font_size: self.font_size
+
+<Body@BoxLayout>:
+    orientation: 'vertical'
+    Field:
+        label: "Nom: "
+        # canvas:
+        #     Color:
+        #         rgba: 1, 0, 0, 1
+        #     Rectangle:
+        #         pos: self.pos
+        #         size: self.size
+    Field:
+        label: "Description: "
+        # canvas:
+        #     Color:
+        #         rgba: 0, 1, 0, 1
+        #     Rectangle:
+        #         pos: self.pos
+        #         size: self.size
+    Field:
+        label: "Prix: "
+        # canvas:
+        #     Color:
+        #         rgba: 0, 0, 1, 1
+        #     Rectangle:
+        #         pos: self.pos
+        #         size: self.size
+    Field:
+        label: "Date: "
+        # canvas:
+        #     Color:
+        #         rgba: 1, 0, 0, 1
+        #     Rectangle:
+        #         pos: self.pos
+        #         size: self.size
+    Button:
+        text: "Envoyer"
+        size_hint: .3, .8
+        pos_hint: {'x': .2}
+    Widget:
